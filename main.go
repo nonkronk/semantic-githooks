@@ -15,7 +15,7 @@ func main() {
 	/////
 	// missing error check
 	unecessaryNewLine()
-	sampleDeadcodes()
+	// sampleDeadcodes()
 
 }
 
