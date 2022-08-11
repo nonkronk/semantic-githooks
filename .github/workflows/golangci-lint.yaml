@@ -4,7 +4,7 @@ on:
 permissions:
   contents: read
   # Optional: allow read access to pull request. Use with `only-new-issues` option.
-  pull-requests: read
+  # pull-requests: read
 jobs:
   golangci:
     name: lint
@@ -19,7 +19,7 @@ jobs:
           version: latest
 
           # Optional: golangci-lint command line arguments.
-          args: --config=.github/.golangci.yml
+          args: --config=.github/.golangci.yml --new-from-rev=origin/master
 
           # Optional: show only new issues if it's a pull request. The default value is `false`.
-          only-new-issues: true
+          # only-new-issues: true

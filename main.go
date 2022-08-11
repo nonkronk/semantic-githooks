@@ -12,7 +12,7 @@ func main() {
 	fmt.Println("show point for index '5'", points[5])
 
 	// sample 4
-	// /
+	// //
 	// missing error check
 	unecessaryNewLine()
 
