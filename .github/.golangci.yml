@@ -1,0 +1,43 @@
+run:
+  allow-parallel-runners: true
+  timeout: 5m
+linters-settings:
+  govet:
+    # Enable all analyzers.
+    # Default: false
+    enable-all: true
+    # Disable analyzers by name.
+    # Run `go tool vet help` to see all analyzers.
+    # Default: []
+    disable:
+      - fieldalignment # too strict
+  misspell:
+    locale: US
+  errcheck:
+    check-type-assertions: false
+    check-blank: false
+  rowserrcheck:
+    packages:
+      - github.com/jmoiron/sqlx
+linters:
+  disable-all: true
+  enable:
+    - govet # Vet examines Go source code and reports suspicious constructs, such as Printf calls whose arguments do not align with the format string
+    - deadcode # Finds unused code
+    - errcheck # Errcheck is a program for checking for unchecked errors in go programs.
+    - rowserrcheck # checks whether Err of rows is checked successfully
+    - unused 
+    - varcheck # Check usage of exported fields and variables.
+    - whitespace # Tool for detection of leading and trailing whitespace
+    - structcheck # Finds unused struct fields
+    - ineffassign # Detects when assignments to existing variables are not used
+    - bodyclose # checks whether HTTP response body is closed successfully
+    - staticcheck # Staticcheck is a go vet on steroids, applying a ton of static analysis checks
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - gomnd
+  exclude-use-default: false
+  max-same-issues: 0
+  max-issues-per-linter: 0

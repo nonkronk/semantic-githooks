@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+LC_ALL=C
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No Color
+
+local_branch="$(git rev-parse --abbrev-ref HEAD)"
+branch_format="^(development|master|main|(ch|ft|fix|ts|bd|rl|mg|(b|h)f)(\_[a-zA-Z0-9]+([-][a-zA-Z0-9]+)*){1,2}|release\_[0-9]+(\.[0-9]+)*(-(alpha|beta|rc)[0-9]*)?)$"
+convention_docs='https://tokopedia.atlassian.net/wiki/spaces/PINFRA/pages/2020868902/Convention+for+Naming+Branches+and+Commits'
+
+# check semantic scheme
+if [[ ! $local_branch =~ $branch_format ]]; then
+  printf "Your branch didn't follow the convention: ${YELLOW}$local_branch${NC}
+
+Correct example: ${GREEN}ft_add-awesome-feature${NC}
+
+Please refer to: ${BLUE}\e[4m${convention_docs}"; echo
+  exit 1
+fi
+
+exit 0
