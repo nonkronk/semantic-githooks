@@ -1,6 +1,9 @@
 run:
   allow-parallel-runners: true
   timeout: 5m
+  skip-dirs:
+    - .github/workflows/*
+
 linters-settings:
   govet:
     # Enable all analyzers.
