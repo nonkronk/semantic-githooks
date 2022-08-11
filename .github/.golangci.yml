@@ -3,12 +3,7 @@ run:
   timeout: 5m
 linters-settings:
   govet:
-    # Enable all analyzers.
-    # Default: false
     enable-all: true
-    # Disable analyzers by name.
-    # Run `go tool vet help` to see all analyzers.
-    # Default: []
     disable:
       - fieldalignment # too strict
   misspell:
