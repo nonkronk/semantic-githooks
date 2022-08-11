@@ -5,10 +5,10 @@ on:
       - master
       - main
     paths:
-      - '**/*.go'
+      - '**.go'
   pull_request:
     paths:
-      - '**/*.go'
+      - '**.go'
 permissions:
   contents: read
   # Optional: allow read access to pull request. Use with `only-new-issues` option.
