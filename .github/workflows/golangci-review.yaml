@@ -1,7 +1,7 @@
 name: reviewdog
 on: [pull_request]
-env:
-  GOPATH: ${{ github.workspace }}/go
+# env:
+#   GOPATH: ${{ github.workspace }}/go
 jobs:
   golangci-lint:
     name: golangci-lint
@@ -18,6 +18,6 @@ jobs:
           reporter: "github-pr-review"
           # go_version: "1.15.2"
           golangci_lint_flags: "--config=.github/.golangci.yml --new-from-rev=origin/master"
-        env: 
-          GOCACHE: ${{ github.workspace }}/go/Caches
-          GOLANGCI_LINT_CACHE: ${{ github.workspace }}/Caches
+        # env: 
+        #   GOCACHE: ${{ github.workspace }}/go/Caches
+        #   GOLANGCI_LINT_CACHE: ${{ github.workspace }}/Caches
