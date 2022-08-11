@@ -28,7 +28,7 @@ linters:
     - rowserrcheck # checks whether Err of rows is checked successfully
     - unused 
     - varcheck # Check usage of exported fields and variables.
-    - whitespace # Tool for detection of leading and trailing whitespace
+#    - whitespace # Tool for detection of leading and trailing whitespace
     - structcheck # Finds unused struct fields
     - ineffassign # Detects when assignments to existing variables are not used
     - bodyclose # checks whether HTTP response body is closed successfully
