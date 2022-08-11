@@ -4,8 +4,6 @@ on:
     branches:
       - master
       - main
-    paths:
-      - '**.go'
   pull_request:
     paths:
       - '**.go'
