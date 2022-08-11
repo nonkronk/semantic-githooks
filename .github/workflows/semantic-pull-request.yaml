@@ -6,8 +6,6 @@ on:
       - edited
       - opened
       - synchronize
-    paths:
-      - '**/*.go'
 
 jobs:
   validate:
