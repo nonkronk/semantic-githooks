@@ -1,21 +1,18 @@
-name: GolangCI Lint Review
+name: Review GolangCI Lint
+
 on: [pull_request]
-env:
-  GOPATH: ${{ github.workspace }}/go
+
 jobs:
   reviewdog:
-    name: reviewdog
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: Review with GolangCI Lint
         uses: reviewdog/action-golangci-lint@v2
         with:
-          reporter: "github-pr-review"
-          go_version: "1.15.2"
-          golangci_lint_flags: "--config=.github/.golangci.yml --new-from-rev=origin/master"
-        env: 
-          GOCACHE: ${{ github.workspace }}/go/Caches
-          GOLANGCI_LINT_CACHE: ${{ github.workspace }}/Caches
+          reporter: github-pr-review
+          level: warning
