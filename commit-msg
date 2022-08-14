@@ -11,7 +11,7 @@ Using format "<type>(<optional scope>): <description>", start your commit messag
 - test: --> adding missing tests, refactoring tests; no production code change
 - chore: --> updating grunt tasks, github tasks, linter, etc; no production code change
 
-Example: 
+Examples: 
 - feat: Add support for Go 1.19
 - refactor!: Drop support for Node 6
 - feat(ui): Add Button component

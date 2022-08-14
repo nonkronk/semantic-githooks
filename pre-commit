@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 : '
-Using format "<category>_<branch-description>", start your branch name with on of these category word:
+Using format "<category>_<branch-description>", start your branch name with one of these category word:
 
 - ft --> for adding, refactoring or removing a feature.
 - bf --> for bug fixing.
