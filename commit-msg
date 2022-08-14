@@ -1,5 +1,22 @@
 #!/usr/bin/env sh
 
+: '
+Using format "<type>(<optional scope>): <description>", start your commit message with on of these type word:
+
+- feat: --> new feature for the user, not a new feature for build script
+- fix: --> bug fix for the user, not a fix to a build script
+- docs: --> changes to the documentation
+- style: --> formatting, missing semicolons, etc; no production code change
+- refactor: --> refactoring production code, eg. renaming a variable
+- test: --> adding missing tests, refactoring tests; no production code change
+- chore: --> updating grunt tasks, github tasks, linter, etc; no production code change
+
+Example: 
+- feat: Add support for Go 1.19
+- refactor!: Drop support for Node 6
+- feat(ui): Add Button component
+ '
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'

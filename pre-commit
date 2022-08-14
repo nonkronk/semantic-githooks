@@ -1,5 +1,19 @@
 #!/usr/bin/env sh
 
+: '
+Using format "<category>_<branch-description>", start your branch name with on of these category word:
+
+- ft --> for adding, refactoring or removing a feature.
+- bf --> for bug fixing.
+- bd --> for creating specific build artifacts or for doing code coverage runs.
+- rl --> for tagging a specific release version.
+- ts --> for testing or experimenting outside of an issue/ticket.
+- mg --> for temporary branch in resolving merge conflicts.
+- ch --> for chore or everything else (writing documentation, formatting, adding tests, cleaning useless code etc).
+
+Example: bf_fix-carryover-tags
+ '
+
 LC_ALL=C
 
 RED='\033[0;31m'
